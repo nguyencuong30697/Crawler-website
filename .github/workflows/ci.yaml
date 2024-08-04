@@ -34,7 +34,7 @@ jobs:
         with:
           images: marcusnguyn/crawler-website
           tags: |
-            type=raw,value={{date 'YYYY-MM-DD'}}
+            type=raw,value={{date 'YYYY-MM-DD-HH-mm'}}
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v5

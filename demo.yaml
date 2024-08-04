@@ -1,0 +1,23 @@
+services:
+  crawler:
+    image: 080196/crawler-app
+    container_name: crawler
+    env_file:
+      - ./configs/.env.crawler
+    networks:
+      - crawler
+  consumer:
+    image: 080196/consumer-app
+    container_name: consumer
+    env_file:
+      - ./configs/.env.consumer
+    networks:
+      - crawler
+  website:
+    image: marcusnguyn/crawler-website:22222
+    container_name: website
+    ports:
+      - "3100:80"
+    networks:
+      - crawler
+
