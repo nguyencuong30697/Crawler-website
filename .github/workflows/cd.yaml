@@ -29,14 +29,6 @@ jobs:
           images: marcusnguyn/crawler-website
           tags: |
             type=raw,value={{date 'YYYY-MM-DD'}}
-      
-      - name: Build and push Docker image
-        uses: docker/build-push-action@v5
-        with:
-          context: .
-          file: ./Dockerfile
-          push: true
-          tags: ${{ steps.meta.outputs.tags }}
 
       - name: Deploy
         uses: appleboy/ssh-action@v1.0.3
