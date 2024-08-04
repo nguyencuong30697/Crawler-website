@@ -17,7 +17,7 @@ permissions:
 jobs:
   cd:
     name: SSH to server and deploy
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Check out the repo
         uses: actions/checkout@v4
@@ -28,7 +28,7 @@ jobs:
         with:
           images: marcusnguyn/crawler-website
           tags: |
-            type=raw,value={{date 'YYYY-MM-DD'}}
+            type=raw,value={{date 'YYYY-MM-DD-HH-mm'}}
 
       - name: Deploy
         uses: appleboy/ssh-action@v1.0.3

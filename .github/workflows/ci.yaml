@@ -17,7 +17,7 @@ permissions:
 jobs:
   ci:
     name: Build and push image to Docker Hub
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Check out the repo
         uses: actions/checkout@v4
