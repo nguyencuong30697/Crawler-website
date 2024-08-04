@@ -66,6 +66,7 @@ const Blog = () => {
           onSearch={onSearch}
           setSearchQuery={setSearchQuery}
         />
+        <div>Newwwwww</div>
         <main>
           <MainFeaturedPost post={mainFeaturedPost} />
           <Grid container spacing={4}>
