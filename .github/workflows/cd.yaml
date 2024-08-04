@@ -28,7 +28,7 @@ jobs:
         with:
           images: marcusnguyn/crawler-website
           tags: |
-            type=raw,value={{date 'YYYY-MM-DD-HH-mm'}}
+            type=raw,value={{date 'YYYY-MM-DD-HH'}}
 
       - name: Deploy
         uses: appleboy/ssh-action@v1.0.3
